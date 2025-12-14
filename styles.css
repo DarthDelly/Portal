@@ -1,0 +1,58 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;              
+    justify-content: center; 
+    gap: 5%;                      
+    width: 90%;               
+    margin: 0 auto;          
+    box-sizing: border-box;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+
+.boxes {
+    flex: 1 1 250px;             
+    max-width: 400px;       
+    aspect-ratio: 4/3;    
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.boxes h1 {
+    font-size: clamp(32px, 32vw, 32px); 
+    margin: 0;
+    user-select: none;
+}
+
+.boxes p {
+    font-size: clamp(16px, 16vw, 16px);
+    margin: 0;
+}
+
+.boxes button {
+    width: 50%;     
+    max-width: 200px;         
+    height: auto;
+    font-size: clamp(12px, 1.5vw, 18px);
+    padding: 10px 20px;
+    background-color: #066839;
+    border-radius: 10px;
+    color: rgb(222, 222, 236);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.boxes button:hover {
+    transform: scale(1.05);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #065530, 0 0 5px #007c00;
+}
+
+
+

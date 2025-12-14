@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="webpage/css/layout/layout.css">
+        <title>Baranggay Portal</title>
+    </head>
+    <body>
+        <div class="heads">
+            <div id="menu"><img src="webpage/css/layout/images/menubtn.png" alt="menu"></div>
+
+            <div id="side-menu">
+  <a href="../index.html">Home</a>
+  <a href="#">Settings</a>
+  <a href="#">Log-Out</a>
+</div>
+
+<div id="overlay"></div>
+
+
+        <div id="hTitle"><p>Baranngay Portal</p></div>
+
+        <div id="gmail"><img src="webpage/css/layout/images/envelop.png" alt="mails"></div>
+        <div id="info"><img src="webpage/css/layout/images/about.png" alt="about"></div>
+
+        <div id="choice">
+            <div class="box"><p>Home</p></div>
+        </div>
+        </div>
+
+        <div id="quote"><h1>Padayon sa Paglambo</h1></div>
+
+        <div class="background">
+        </div>
+
+        <div class="content">
+            <div class="boxes">
+                <h1>News Headline</h1>
+                <p>Announcements about barangay activities, health advisories, events, and government programs.</p>      
+                <a href="webpage/newsPage.html"><button>Info</button></a>
+            </div>
+            <div class="boxes">
+                <h1>Baranggay Requests</h1>
+                <p>Request Barangay Clearance, Certificate of Residency, Indigency Certificate, Barangay ID, Permit for Small Event...</p>
+                <a href="webpage/baranggayPage.html"><button>Baranggay Requests</button></a>
+            </div>
+            <div class="boxes">
+                <h1>Report</h1>
+                <p>Illegal Dumping, Lost Barangay ID, Disturbance/Noise Complaint, Emergency Assistance...</p>
+                <a href="webpage/reportPage.html"><button>Report</button></a>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="footlist0">
+            <div class="footlist">
+            <ul>
+                <h1>Quick Links</h1>
+                <a href="../index.html"><li>Home</li></a>
+                <li>Requests</li>
+                <li>Reports</li>
+                <li>News</li>
+                <li>Contacts</li>
+            </ul>
+            </div>
+
+            <div class="footlist1">
+                <h1>Contact</h1>
+                <p><img src="webpage/css/layout/images/location.png" alt="location">  Baranngay (Display)</p>
+                <p><img src="webpage/css/layout/images/telephone-178.png" alt="Phone">  Telephone No. (Display)</p>
+                <p><img src="webpage/css/layout/images/contact.png" alt="Contact Person">  Email (Display)</p>
+
+            </div>
+            <div class="footlist2">
+                <h1>Social Media</h1>
+                <img src="webpage/css/layout/images/facebook.png" alt="facebook">
+
+            </div>
+            </div>
+            
+        </footer>
+
+
+        <script>
+            window.addEventListener('scroll', function() {
+                const overlay = document.querySelector('.overlay');
+                const scrollY = window.scrollY;
+                const maxScroll = 500; 
+                let opacity = Math.min(scrollY / maxScroll, 0.7);
+                overlay.style.background = `rgba(107, 156, 107, ${opacity})`;
+                });
+
+                const menu = document.getElementById('menu');
+                const sideMenu = document.getElementById('side-menu');
+                const overlay = document.getElementById('overlay');
+
+                function toggleMenu() {
+                sideMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                }
+
+                menu.addEventListener('click', toggleMenu);
+                overlay.addEventListener('click', toggleMenu);
+
+        </script>
+
+    </body>
+</html>
